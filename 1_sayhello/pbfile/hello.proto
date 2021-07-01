@@ -1,0 +1,14 @@
+syntax="proto3";
+option go_package = ".";
+
+message Request{
+    int32 Id = 1;
+}
+
+message Respond{
+    string Msg = 1;
+}
+
+service BlackBox{
+    rpc SayHello(Request)returns(Respond);
+}
